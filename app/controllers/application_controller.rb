@@ -8,7 +8,8 @@ class ApplicationController < ActionController::Base
  end
 
 def admin?
-true
+false
+redirect_to :departments
 end
 
 
