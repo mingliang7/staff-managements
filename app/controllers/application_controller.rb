@@ -9,7 +9,6 @@ class ApplicationController < ActionController::Base
 
 def admin?
 true
-redirect_to :departments
 end
 
 
