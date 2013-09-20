@@ -1,10 +1,12 @@
 <div class="navbar navbar-fixed-top navbar-inverse">
 	<div class="navbar-inner">
+
 		<div class="container">
+		<a href="#" class="brand">Nidalee company</a>
 		<div class="nav-collapse">
 
 			<ul class="nav">
-				<li class="label-warning"><%= link_to "Login", departments_path%></li>
+				
 				<% if signed_in?%>
 				<li><%= link_to "Department", departments_path%></li>
 
@@ -24,6 +26,7 @@
 <p>&emsp;&emsp;  You can find the new arrival cloth by </p>
 <p>&emsp;&emsp;&emsp;&emsp;    just click the link below!! </p>
 
-&emsp;&emsp;&emsp;&emsp;<a href="#" class="btn btn-large btn-primary">Visit official Website</a>
+<a href="#" class="btn btn-large btn-primary">Visit official Website</a>
+<%=link_to "Staff Login Here", departments_path, class: "btn btn-large btn-info"%>
 </div>
 </div>

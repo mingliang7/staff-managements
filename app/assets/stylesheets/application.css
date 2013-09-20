@@ -52,25 +52,37 @@
 	color: #F5F6FF;
 	font-size: 16px;
 }
-@media screen and (max-width: 1113px) {
-
-.banner{
-background: none;
+@media screen and (max-width: 700px){
+	.container{
+		padding: 20px;
+	}
+	h2{
+		font-size:13px;
+	}
+	.banner .container h1{
+		font-size: 25px;
+	}
+	.btn {
+		margin-top:10px;
+	}
+}
+@media screen and (max-width: 400px){
+	.container{
+		padding: 20px;
+	}
+	.banner .container h2{
+		font-size:25px;
+	}
+	.banner .container h1{
+		font-size: 18px;
+	}
+	.btn {
+		margin-top:5px;
+	}
+	.banner .container p {
+		font-size: 13px;
+	}
 }
 
-@media screen and (max-width: 1113px) {
-
-.banner .container h1{
-display: none;
-
-}
-.banner .container h2{
-display: none;
-
-}
-.banner .container p{
-	color: #000;
-}
-}
 
 
