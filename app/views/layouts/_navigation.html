@@ -1,0 +1,25 @@
+    <div class="navbar navbar-fixed-top navbar-inner">
+    <div class="btn-group pull-right" >
+             <a class="btn dropdown-toggle" id="dropdown" href="#">
+             <%if signed_in?%>
+           <i class="icon-user"></i>&nbsp; <%= current_user.email%>
+            <%end%>
+            <span class="caret"></span>
+             </a>
+            <ul class="dropdown-menu">
+    <!-- dropdown menu links -->
+             <li><% if signed_in?%>
+             <%= link_to "Logout", destroy_user_session_path, :method => :delete%>
+            <%end%>
+            </li>
+            </ul>
+    </div>
+<div class="container">
+        <ul class="nav">
+        <li><%=link_to "Home", root_path%> </li>
+        <li><%=link_to "Department", departments_path %> </li>
+        </ul>
+</div>
+    </div> 
+    <div class="top">
+    </div>

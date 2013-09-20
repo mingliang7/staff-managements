@@ -1,0 +1,40 @@
+<%= render "layouts/navigation"%>
+<div class="container">
+<h1>Listing staffs</h1>
+
+<table class="table">
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Role</th>
+    <th>Age</th>
+    <th>Sex</th>
+    <th>Dob</th>
+     <th>Address</th>
+    <th>Department</th>
+    <th></th>
+    <th><i class="icon-wrench"></i>&nbsp;Action</th>
+    <th></th>
+  </tr>
+
+<% @staffs.each do |staff| %>
+  <tr>
+    <td><%= staff.first_name %></td>
+    <td><%= staff.last_name %></td>
+    <td><%= staff.role %></td>
+    <td><%= staff.age %></td>
+    <td><%= staff.sex %></td>
+    <td><%= staff.dob %></td>
+    <td><%= truncate(staff.address, :length => 15) %></td>
+    <td><%= staff.department.name %></td>
+    <td><i class="icon-th-large"></i>&nbsp;<%=link_to 'Show', [@department, staff]%></td>
+    <td><i class="icon-edit"></i>&nbsp;<%= link_to 'Edit', edit_department_staff_path(staff.department, staff) %></td>
+    <td><i class="icon-trash"></i>&nbsp;<%= link_to 'Destroy', [staff.department,staff], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Staff', new_department_staff_path %>
+</div>
