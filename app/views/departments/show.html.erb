@@ -1,0 +1,17 @@
+<div class="modal modal-form"  id="show">
+<div class="modal-body">
+
+<p id="notice" class="label-success"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @department.name %>
+</p>
+
+<%=link_to "Display #{@department.name}'s staff", department_staffs_path(@department), class: "btn btn-primary" %>
+<%= link_to 'Edit', edit_department_path(@department), class: "btn btn-warning" %> 
+<%= link_to 'Back', departments_path, class: "btn" %>
+</div>
+</div>
+<div class="partial-overlay">
+</div>

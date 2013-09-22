@@ -1,0 +1,28 @@
+<%= render "layouts/navigation"%>
+
+
+<div class="top"></div>
+<div class="container">
+
+<div class="span7 offset2">
+<div class="span4">
+<h2>Editing staff</h2>
+</div>
+<br><br><br>
+
+<%= render 'form' %>
+
+
+</div>
+
+	<div class="span7 offset3">
+	<br>
+	<div class="span3">
+	<%= link_to 'Show', [@department,@staff], class: "btn btn-success disabled " %> 
+	
+	<%= link_to 'Back', department_staffs_path, class: "btn disabled" %>
+	</div>
+	</div>
+</div>
+
+<div class="top"></div>

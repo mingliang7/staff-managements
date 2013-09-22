@@ -1,0 +1,55 @@
+
+<div class="modal modal-form" id="show">
+<div class="modal-body">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @staff.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @staff.last_name %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @staff.age %>
+</p>
+
+<p>
+  <b>Sex:</b>
+  <%= @staff.sex %>
+</p>
+
+<p>
+  <b>Role:</b>
+  <%= @staff.role %>
+</p>
+<p>
+  <b>Address:</b>
+  <%= @staff.address %>
+</p>
+<p>
+  <b>Dob:</b>
+  <%= @staff.dob %>
+</p>
+
+<p>
+  <b>Salary:</b>
+  <%= @staff.salary %>
+</p>
+
+<p>
+  <b>Department:</b>
+  <%= @staff.department.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_department_staff_path(@department,@staff), class: "btn btn-success" %>
+<%= link_to 'Back', department_staffs_path(@department), class: "btn" %>
+</div>
+</div>
+<div class="partial-overlay">
+</div>

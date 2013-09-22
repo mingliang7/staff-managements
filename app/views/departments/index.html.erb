@@ -1,0 +1,30 @@
+<%= render "layouts/navigation"%>
+<div class="container">
+<h1>Listing departments</h1>
+
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Staff Currently</th>
+    <th></th>
+    <th><i class="icon-wrench"></i>&nbsp;Action</th>
+    <th></th>
+  </tr>
+
+<% @departments.each do |department| %>
+  <tr>
+    <td><%= department.name %></td>
+    <td><%= department.staffs.count %></td>
+    <td><i class="icon-th"></i>&nbsp;<%= link_to 'Show Staff', department %></td>
+    <td><i class="icon-edit"></i>&nbsp;<%= link_to 'Edit', edit_department_path(department) %></td>
+    <td><i class="icon-trash"></i>&nbsp;<%= link_to 'Destroy', department, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Department', new_department_path, :class => "btn btn-primary" %>
+<%= link_to 'Display all staffs', all_path, class: "pull-right" %>
+<i class="icon-list pull-right"></i>
+</div>
