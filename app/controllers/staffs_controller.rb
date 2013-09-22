@@ -7,12 +7,15 @@ class StaffsController < ApplicationController
 
   end
   def index
+
     @staffs = @department.staffs.search(params[:search])
     if @staffs.class == Array
       @staffs = Kaminari.paginate_array(@staffs).page(params[:page]).per(5)
     else
         @staffs = @staffs.page(params[:page]).per(5)
     end
+
+
 
     respond_to do |format|
       format.html # index.html.erb
