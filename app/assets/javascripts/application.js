@@ -21,7 +21,7 @@ $(document).ready(function(){
 		return false;
 	});
 
-<<<<<<< HEAD
+
 	$('#search').focus(function(){
 		$('#search').animate({width: 280});
 
@@ -29,10 +29,9 @@ $(document).ready(function(){
 	$('#search').focusout(function(){
 		$('#search').animate({width: 206});
 
-=======
+	});
 	$(window).click(function(){
 		$(".dropdown-menu").hide();
->>>>>>> ad38743983a46d3a60c5d04637891dec386ea797
 	});
 
 
