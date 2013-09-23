@@ -40,8 +40,16 @@
     <td><i class="icon-trash"></i>&nbsp;<%= link_to 'Destroy', [staff.department,staff], method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
-</table>
 
+
+
+</table>
+<div class="text-center">
+    
+    <% if @staffs.empty?%>
+    <div class="text-center alert"><em >NAME NOT FOUND </em></div>
+<% end %>
+</div>
 <br />
 
 
@@ -52,3 +60,4 @@
 
 
 </div>
+<div class="top"></div>

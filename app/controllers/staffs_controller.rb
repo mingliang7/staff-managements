@@ -8,11 +8,11 @@ class StaffsController < ApplicationController
   end
   def index
 
-    @staffs = @department.staffs.search(params[:search])
+    @staffs = @department.staffs.order_firstname.search(params[:search])
     if @staffs.class == Array
-      @staffs = Kaminari.paginate_array(@staffs).page(params[:page]).per(5)
+      @staffs = Kaminari.paginate_array(@staffs).page(params[:page]).per(7)
     else
-        @staffs = @staffs.page(params[:page]).per(5)
+        @staffs = @staffs.page(params[:page]).per(7)
     end
 
 
